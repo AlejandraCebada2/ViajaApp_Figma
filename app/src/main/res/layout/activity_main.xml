@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    tools:context=".MainActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Explora el mundo"
+        android:textSize="24sp"
+        android:textColor="#000"
+        android:layout_margin="16dp"
+        android:textStyle="bold" />
+
+    <!-- Barra de búsqueda -->
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Buscar destinos"
+        android:layout_margin="16dp"
+        android:padding="12dp"
+        android:background="@drawable/search_background"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="8dp" />
+
+    <!-- Sección de destinos populares -->
+    <TextView
+        android:id="@+id/popularDestinationsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Destinos populares"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold" />
+
+    <!-- Botón "Ver todos" -->
+    <TextView
+        android:id="@+id/viewAllText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver todos"
+        android:textSize="16sp"
+        android:textColor="#3F51B5"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="end" />
+
+    <!-- Botones de filtro -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/mostViewedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mas vistos"
+            android:background="@drawable/button_selected_background"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/nearButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cercano"
+            android:background="@drawable/button_unselected_background"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/farButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lejano"
+            android:background="@drawable/button_unselected_background"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <!-- Imagen de destino popular -->
+    <ImageView
+        android:id="@+id/popularDestinationImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sample_image"
+        android:layout_margin="16dp" />
+
+    <!-- Barra de navegación inferior -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:gravity="bottom"
+        android:layout_gravity="bottom">
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <ImageButton
+            android:id="@+id/calendarButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_accesstime"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <ImageButton
+            android:id="@+id/favoritesButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_favorites"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_profile"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+    </LinearLayout>
+
+</LinearLayout>
